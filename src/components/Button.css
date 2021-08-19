@@ -3,8 +3,7 @@
   color: white;
 } */
 
-.button-wrapper {
-    height: 4em;
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,11 +12,12 @@
     background-color: rgb(241, 243, 244);
     color: black;
     flex: 1;
-    margin: 5px 5px 5px .5px;
-    border-radius: 15px 5px 5px 5px;
+    margin: 5px;
+    border-radius: 25px;
+    width: 80px;
     
   }
-  .clear-btn {
+  /* .clear-btn {
     height: 4em;
     display: flex;
     justify-content: center;
@@ -28,12 +28,12 @@
     color: black;
     flex: 1;
     margin: 5px 5px 5px .5px;
-    border-radius: 20px;
+    border-radius: 25px;
     
-  }
+  } */
   
   /* will show as different colors if value on calc is not a number */
-  .operator {
+  /* .operator {
     background-color: rgb(223, 225, 229);
     color: black;
-  }
+  } */
