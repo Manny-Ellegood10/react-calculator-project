@@ -1,8 +1,14 @@
 .calculator-body {
     width: 400px;
-    height: 400px;
+    height: 440px;
     border-radius: 10px;
     box-shadow: -5px 8px 10px 5px rgb(66, 133, 244);
+  }
+
+  .calculator-body,.standard,.science {
+    float: left;
+    font-size: large;
+    margin-left: 5px;
   }
   
   .display-block {

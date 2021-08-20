@@ -17,6 +17,21 @@
     width: 80px;
     
   }
+
+  .equal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1.4em;
+    background-color:rgb(66, 133, 244);
+    color:white;
+    flex: 1;
+    margin: 5px;
+    border-radius: 25px;
+    width: 80px;
+    
+  }
   /* .clear-btn {
     height: 4em;
     display: flex;

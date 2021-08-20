@@ -22,7 +22,7 @@ class EqualButton extends Component {
   render() {
     return (
       <button id={this.props.id} 
-      className="button"
+      className="equal-button"
       onClick={this.handleClick}
       >
       {this.props.button}
