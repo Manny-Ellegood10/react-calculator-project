@@ -5,12 +5,14 @@ import Button from "./Button";
 import EqualButton from "./EqualButton";
 import "./Button.css";
 
+// create a component to represents the keyboard
+
 class Keypad extends Component {
   constructor(props) {
     super(props);
   }
   
-
+// keypad wrapper with flexbox
   render() {
     return (
       <div className="app">

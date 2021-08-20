@@ -14,9 +14,9 @@ class Calc extends Component {
   render() {
     return (
       <>
-      <div className="Stan">Standard |</div>
-      <div className="Science">Scientific</div>
       <div className="calculator-body">
+      <div className="standard">Standard |</div>
+      <div className="science">Scientific</div>
         <div className="display-block skewed-shadow">
           <Display
             display={this.props.display}

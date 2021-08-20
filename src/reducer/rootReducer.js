@@ -7,6 +7,7 @@ import { CLEAR } from "../actions/actionTypes";
 import { EQUAL } from "../actions/actionTypes";
 import * as math from 'mathjs'
 
+// set initial state. State should be represented by an object
 const initialState = {
   display: '0',
   prevOp: "",
@@ -14,14 +15,14 @@ const initialState = {
   history: '0'
 }
 
-
+// (prevState, action) => newState
 export default function (state = initialState, action) {
   switch (action.type) {
 
-
+// for each case, spread operator makes a new copy. 
     case UPDATE: {
       const updateDisplay = action.payload;
-      // dont update if one decimal is already present in display value. return state
+      // the display will not update if one decimal is already present in display value. return state
       if ((state.display.includes('.') && updateDisplay.input === ".") || state.display.length > 8) {
         return {
           ...state,
@@ -38,7 +39,7 @@ export default function (state = initialState, action) {
     }
 
 
-    // when operator actions are fired, remove last entry if double operator used, set history as ongoing string. 
+    // when operator actions are used, remove the last entry if more than one operator used, set history as ongoing string. 
     case ADD: {
 
       const history = () => state.prevOp === "operator" ? state.history.slice(0, state.history.length - 4)
@@ -106,10 +107,13 @@ export default function (state = initialState, action) {
         history: "0"
       }
     }
-    // equal will concat display to history to give current string. then Maths it from mathJS library. 
+    // equal will concat display to history to give current string.  
+    // Maths to evaluate state from mathJS library. Convert to string after
+    // only display 4 digits after decimal
+
     case EQUAL: {
       let states = state.history + state.display;
-      let maths = math.evaluate(states);
+      let maths = math.evaluate(states); 
 
       if (state.prevOp === "equal") {
         return {
